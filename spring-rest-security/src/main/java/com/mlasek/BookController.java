@@ -23,11 +23,9 @@ public class BookController {
     @Autowired
     private HttpServletRequest request;
 
-    @GetMapping("/test")
-    List<Book> test() {
-        String userName = request.getUserPrincipal().getName();
-        String url = request.getRequestURL().toString();
-        return repository.findAll();
+    @GetMapping("/exception")
+    void ex() {
+        throw new NullPointerException();
     }
 
     // Find
