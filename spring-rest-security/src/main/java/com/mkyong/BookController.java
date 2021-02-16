@@ -8,6 +8,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import java.util.List;
@@ -19,6 +20,15 @@ public class BookController {
 
     @Autowired
     private BookRepository repository;
+    @Autowired
+    private HttpServletRequest request;
+
+    @GetMapping("/test")
+    List<Book> test() {
+        String userName = request.getUserPrincipal().getName();
+        String url = request.getRequestURL().toString();
+        return repository.findAll();
+    }
 
     // Find
     @GetMapping("/books")
