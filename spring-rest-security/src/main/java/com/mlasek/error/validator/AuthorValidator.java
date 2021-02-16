@@ -1,4 +1,4 @@
-package com.mkyong.error.validator;
+package com.mlasek.error.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

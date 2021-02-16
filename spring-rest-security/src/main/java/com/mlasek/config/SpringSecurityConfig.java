@@ -1,4 +1,4 @@
-package com.mkyong.config;
+package com.mlasek.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

@@ -1,4 +1,4 @@
-package com.mkyong;
+package com.mlasek;
 
 
 import org.junit.Before;
